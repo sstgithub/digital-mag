@@ -1,0 +1,12 @@
+object @photo do |photo|
+	attributes :photo_name, :image, :created_at, :updated_at
+
+	object :place => photo.place do |place|
+		attributes :name, :latitude, :longitude, :created_at, :updated_at
+
+		object :location => place.location do |location|
+			attributes :city, :state, :country
+		end
+	end
+
+end
