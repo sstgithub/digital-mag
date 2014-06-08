@@ -20,7 +20,9 @@ class PhotosController < ApplicationController
 
 	def update
 		@photo = Photo.find(params[:id])
+		puts @photo.inspect
 		if @photo.update_attributes(photo_params)
+			puts @photo.inspect
 			redirect_to photos_path
 		else
 			redirect_to photos_path
