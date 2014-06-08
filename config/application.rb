@@ -19,5 +19,14 @@ module DigMediaPgApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.paperclip_defaults = {
+        :storage => :s3,
+        :s3_host_name => 's3-us-west-2.amazonaws.com',
+        :s3_credentials => {
+        :bucket => 'digital-mag',
+        :access_key_id => 'AKIAIG7C73RHH46W2WCQ',
+        :secret_access_key => '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'
+        }
+    }
   end
 end

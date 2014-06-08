@@ -42,5 +42,10 @@ gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
 
+gem "paperclip", "~> 4.1"
+gem 'aws-sdk'
+
 ruby "2.0.0"
+
+
 
