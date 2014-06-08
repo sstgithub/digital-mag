@@ -5,7 +5,7 @@ collection @photos do |photo|
 		attribute :url
 	end
 
-	object :comment => photo.comment do |c|
+	object :comment => photo.comments do |c|
 		attributes :content
 	end
 
