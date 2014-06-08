@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
 	end
 
 	def new
-		@photo = Photo.new(params[:id])
+		@photo = Photo.new
 	end
 
 	def edit
@@ -17,6 +17,11 @@ class PhotosController < ApplicationController
 
 	def create
 		@photo = Photo.new(photo_params)
+		if @photo.save
+			redirect_to photo_path(@photo)
+		else
+			redirect_to photos_path
+		end
 	end
 
 	def update

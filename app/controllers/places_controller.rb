@@ -7,7 +7,7 @@ class PlacesController < ApplicationController
 	end
 
 	def new
-		@place = Place.new(params[:id])
+		@place = Place.new
 	end
 
 	def edit
@@ -15,7 +15,7 @@ class PlacesController < ApplicationController
 	end
 
 	def create
-		@place = Place.new(params[:id])
+		@place = Place.new(place_params)
 		if @place.save
 			photos_path
 		else
