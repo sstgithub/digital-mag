@@ -1,11 +1,15 @@
 collection @photos do |photo|
-	attributes :photo_name, :image, :created_at, :updated_at
+	attributes :id, :photo_name, :created_at, :updated_at
+
+	object :avatar => photo.avatar do |a|
+		attribute :url
+	end
 
 	object :place => photo.place do |place|
-		attribute :name, :latitute, :longitude, :created_at, :updated_at, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
+		attributes :name, :latitude, :longitude, :created_at, :updated_at
 
 		object :location => place.location do |location|
-			attribute :city, attribute :state, attribute :country
+			attributes :city, :state, :country
 		end
 	end
 

@@ -1,5 +1,5 @@
 object @photo do |photo|
-	attributes :photo_name, :image, :created_at, :updated_at
+	attributes :photo_name, :created_at, :updated_at
 
 	object :avatar => photo.avatar do |a|
 		attribute :url
