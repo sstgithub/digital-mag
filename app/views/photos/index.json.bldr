@@ -2,7 +2,7 @@ collection @photos do |photo|
 	attributes :photo_name, :image, :created_at, :updated_at
 
 	object :place => photo.place do |place|
-		attribute :name, :latitute, :longitude, :created_at, :updated_at
+		attribute :name, :latitute, :longitude, :created_at, :updated_at, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
 
 		object :location => place.location do |location|
 			attribute :city, attribute :state, attribute :country
