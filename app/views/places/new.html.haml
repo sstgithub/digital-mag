@@ -1,0 +1,14 @@
+= form_for @place do |f|
+	= f.select :location_id, Location.all.collect {|l| [(l.city + ", " + l.state + " " + l.country), l.id]}
+	%br
+	= f.label :name
+	= f.text_field :name
+	%br
+	= f.label :latitude
+	= f.text_field :latitude #eventually this is pulled in auto just from place name using google maps api
+	%br
+	= f.label :longitude
+	= f.text_field :longitude #eventually this is pulled in auto just from place name using google maps api
+	%br
+	%br
+	= f.submit

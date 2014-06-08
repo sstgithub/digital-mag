@@ -22,12 +22,12 @@ module DigMediaPgApp
     config.paperclip_defaults = {
         :storage => :s3,
         :s3_host_name => 's3-us-west-2.amazonaws.com',
-        :s3_credentials => {
-        :bucket => 'digital-mag',
-        :access_key_id => 'AKIAIG7C73RHH46W2WCQ',
-        :secret_access_key => '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',
-        :url => "/:image/:id/:style/:basename.:extension",
-        :path => ":image/:id/:style/:basename.:extension"
+        :s3_credentials => { 
+            :bucket => Rails.application.secrets.bucket,
+            :access_key_id => Rails.application.secrets.access_key_id,
+            :secret_access_key => Rails.application.secrets.secret_access_key,
+                :url => "/:image/:id/:style/:basename.:extension",
+                :path => ":image/:id/:style/:basename.:extension"
         }
     }
   end

@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   resources :photos
 
   root 'photos#index'
+
+  resources :places
+
+  resources :locations
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

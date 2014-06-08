@@ -1,2 +1,10 @@
-= form_for @photo, :url => photo_path, :html => { :multipart => true } do |form|
-  = form.file_field :avatar
+= form_for @photo do |f|
+	= f.select :place_id, Place.all.collect {|p| [(p.name + " in " + Location.find(p.location_id).city + ", " + Location.find(p.location_id).state), p.id]}
+	%br
+	= f.label :photo_name
+	= f.text_field :photo_name
+	%br
+	= f.file_field :avatar
+	%br
+	%br
+	= f.submit

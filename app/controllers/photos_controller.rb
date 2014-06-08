@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
 	end
 
 	def new
-		@photo = Photo.new(place_id: params[:place_id])
+		@photo = Photo.new(params[:id])
 	end
 
 	def edit
