@@ -1,8 +1,8 @@
 object @photo do |photo|
-	attributes :photo_name, :image, :created_at, :updated_at
+	attributes :photo_name, :image, :created_at, :updated_at, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
 
 	object :place => photo.place do |place|
-		attributes :name, :latitude, :longitude, :created_at, :updated_at, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
+		attributes :name, :latitude, :longitude, :created_at, :updated_at
 
 		object :location => place.location do |location|
 			attributes :city, :state, :country
