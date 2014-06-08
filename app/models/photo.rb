@@ -1,6 +1,9 @@
 class Photo < ActiveRecord::Base
 	belongs_to :place
 
+	has_many :comments, as: :commentable
+	accepts_nested_attributes_for :comments
+
 	Paperclip.options[:command_path] = "/usr/local/bin/"
 
 	has_attached_file :avatar, 
