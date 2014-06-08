@@ -1,5 +1,9 @@
 object @photo do |photo|
-	attributes :photo_name, :image, :created_at, :updated_at, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
+	attributes :photo_name, :image, :created_at, :updated_at
+
+	object :avatar => photo.avatar do |a|
+		attribute :url
+	end
 
 	object :place => photo.place do |place|
 		attributes :name, :latitude, :longitude, :created_at, :updated_at

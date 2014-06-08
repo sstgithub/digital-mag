@@ -25,7 +25,9 @@ module DigMediaPgApp
         :s3_credentials => {
         :bucket => 'digital-mag',
         :access_key_id => 'AKIAIG7C73RHH46W2WCQ',
-        :secret_access_key => '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'
+        :secret_access_key => 'axD7fG4MoRP8Vr1h2ez16Qn2NqHfdepna5Ch0hRr',
+        :url => "/:image/:id/:style/:basename.:extension",
+        :path => ":image/:id/:style/:basename.:extension"
         }
     }
   end
