@@ -3,6 +3,7 @@ collection @photos do |photo|
 
 	object :avatar => photo.avatar do |a|
 		attribute :url
+		attribute(:thumbnail)  { a.url(:thumb) }
 	end
 
 	collection :comments => photo.comments do |c|
@@ -19,6 +20,7 @@ collection @photos do |photo|
 		object :location => place.location do |location|
 			attributes :city, :state, :country
 		end
+		
 	end
 
 end

@@ -8,6 +8,6 @@ class Photo < ActiveRecord::Base
 
 	has_attached_file :avatar, 
 		:styles => { :medium => "300x300>", :thumb => "100x100>" }, 
-		:default_url => "/images/:style/missing.png"
+		:default_url => "http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/100px-No_image_available.svg.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 end
