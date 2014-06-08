@@ -5,8 +5,16 @@ collection @photos do |photo|
 		attribute :url
 	end
 
+	object :comment => photo.comment do |c|
+		attributes :content
+	end
+
 	object :place => photo.place do |place|
 		attributes :name, :latitude, :longitude, :created_at, :updated_at
+
+		collection :comments => place.comments do |comments|
+			attributes :content
+		end
 
 		object :location => place.location do |location|
 			attributes :city, :state, :country
