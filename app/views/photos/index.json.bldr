@@ -20,7 +20,7 @@ collection @photos do |photo|
 		object :location => place.location do |location|
 			attributes :city, :state, :country
 		end
-		
+			
 	end
 
 end
