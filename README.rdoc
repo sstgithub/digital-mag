@@ -1,6 +1,6 @@
 == README
 
-This is a photo uploader and JSON API generator built for Iron Yard's hackathon. It creates/updates API every time a new photo/file is added. The API was successfully accessed and used by iOS developers to automatically update their iOS app with the new photos/files that were added.
+This is a photo uploader and JSON API generator built for the iOS digital magazine app during Iron Yard's hackathon. It creates/updates API every time a new photo/file is added. The API was successfully accessed and used by iOS developers to automatically update their iOS app with the new photos/files that were added.
 
 ==== Main technologies used:
 
