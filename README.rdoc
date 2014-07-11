@@ -1,28 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a photo uploader and JSON API generator custom built for Iron Yard's hackathon. It creates/updates API every time a new photo/file is added. The API was successfully accessed and used by iOS developers to automatically update their iOS app with the new photos/files that were added.
 
-Things you may want to cover:
+==== Main technologies used:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* bldr gem to generate JSON API for iOS developers to access
+* Paperclip gem (to upload files)
+* aws-sdk gem to interact with Amazon S3 Web Services API (to store files)
